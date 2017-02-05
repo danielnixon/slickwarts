@@ -34,5 +34,6 @@
 
 ## See also
 
+* [ExtraWarts](https://github.com/danielnixon/extrawarts): Extra WartRemover warts.
 * [PlayWarts](https://github.com/danielnixon/playwarts):  WartRemover warts for [Play Framework](https://www.playframework.com/).
 * [Scala.js Warts](https://github.com/danielnixon/scalajswarts):  WartRemover warts for [Scala.js](https://www.scala-js.org/).
