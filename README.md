@@ -1,0 +1,33 @@
+# SlickWarts
+
+[![Build Status](https://travis-ci.org/danielnixon/slickwarts.svg?branch=master)](https://travis-ci.org/danielnixon/slickwarts)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/slickwarts_2.11/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.danielnixon/slickwarts_2.11)
+
+[WartRemover](https://github.com/wartremover/wartremover) warts for [Slick](http://slick.typesafe.com/).
+
+## Versions
+
+| SlickWarts version | WartRemover version | Slick version | Scala version |
+|--------------------|---------------------|---------------|---------------|
+| 0.1.0              | 1.3.0               | 3.1.1         | 2.11.8        |
+
+## Usage
+
+1. Setup [WartRemover](https://github.com/wartremover/wartremover).
+2. Add the following to your `plugins.sbt`:
+
+    ```scala
+    addSbtPlugin("org.danielnixon" % "sbt-slickwarts" % "0.1.0")
+    ```
+
+3. Add the following to your `build.sbt`:
+    ```scala
+    wartremoverWarnings ++= Seq(
+      SlickWart.BasicStreamingActionPartial)
+    ```
+
+## Warts
+
+#### BasicStreamingActionPartial
+
+`slick.profile.BasicStreamingAction` has a `head` method which will fail if the stream is empty (i.e. if the `SELECT` SQL query returned zero rows). Use `headOption` instead.
