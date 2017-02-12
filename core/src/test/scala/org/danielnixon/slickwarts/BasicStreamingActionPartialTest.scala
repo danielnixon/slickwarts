@@ -21,7 +21,7 @@ class BasicStreamingActionPartialTest extends FunSuite {
     val result = WartTestTraverser(BasicStreamingActionWart) {
       basicStreamingAction.head
     }
-    assertResult(List("BasicStreamingAction#head is disabled - use BasicStreamingAction#headOption instead"), "result.errors")(result.errors)
+    assertResult(List("[wartremover:BasicStreamingActionPartial] BasicStreamingAction#head is disabled - use BasicStreamingAction#headOption instead"), "result.errors")(result.errors)
     assertResult(List.empty, "result.warnings")(result.warnings)
   }
 

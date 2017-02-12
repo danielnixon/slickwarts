@@ -45,7 +45,7 @@ lazy val commonSettings = Seq(
 )
 
 val coreName = "slickwarts"
-val wartremoverVersion = "1.3.1"
+val wartremoverVersion = "2.0.1"
 val scalatestVersion = "3.0.1"
 
 lazy val root = Project(
