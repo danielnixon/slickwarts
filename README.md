@@ -7,9 +7,10 @@
 
 ## Versions
 
-| SlickWarts version | WartRemover version | Slick version | Scala version |
-|--------------------|---------------------|---------------|---------------|
-| 0.2.0              | 2.0.1               | 3.1.1         | 2.11.8        |
+| SlickWarts version | WartRemover version | Slick version | Scala version  |
+|--------------------|---------------------|---------------|----------------|
+| 0.3.0              | 2.0.2               | 3.2.0-RC1     | 2.11.8, 2.12.1 |
+| 0.2.0              | 2.0.1               | 3.1.1         | 2.11.8         |
 
 ## Usage
 
@@ -17,7 +18,7 @@
 2. Add the following to your `plugins.sbt`:
 
     ```scala
-    addSbtPlugin("org.danielnixon" % "sbt-slickwarts" % "0.2.0")
+    addSbtPlugin("org.danielnixon" % "sbt-slickwarts" % "0.3.0")
     ```
 
 3. Add the following to your `build.sbt`:
