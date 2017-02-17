@@ -1,7 +1,7 @@
 all:
-	sbt test
+	sbt "so clean" "such test"
 
 dist:
-	sbt clean test publishSigned
+	sbt "so clean" "such test" "very publishSigned"
 
 .PHONY: all dist
