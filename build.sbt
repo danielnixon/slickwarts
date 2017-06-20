@@ -2,7 +2,7 @@ import scalariform.formatter.preferences._
 
 val scala210 = "2.10.6"
 val scala211 = "2.11.8"
-val scala212 = "2.12.1"
+val scala212 = "2.12.2"
 
 scalaVersion := scala212
 
@@ -51,8 +51,8 @@ lazy val commonSettings = Seq(
 )
 
 val coreName = "slickwarts"
-val wartremoverVersion = "2.0.2"
-val scalatestVersion = "3.0.1"
+val wartremoverVersion = "2.1.1"
+val scalatestVersion = "3.0.3"
 
 lazy val core = Project(
   id = "core",
@@ -64,7 +64,7 @@ lazy val core = Project(
   libraryDependencies ++= Seq(
     "org.wartremover" %% "wartremover" % wartremoverVersion,
     "org.scalatest" %% "scalatest" % scalatestVersion % Test,
-    "com.typesafe.slick" %% "slick" % "3.2.0-RC1" % Test
+    "com.typesafe.slick" %% "slick" % "3.2.0" % Test
   ),
   dependencyOverrides ++= Set(
     "org.scalatest" %% "scalatest" % scalatestVersion
